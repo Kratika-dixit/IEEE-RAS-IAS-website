@@ -1,61 +1,492 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Professional static website foundation for IEEE RAS and IEEE IAS Student Chapters." />
-    <meta name="keywords" content="IEEE, RAS, IAS, student chapter, robotics, industry applications" />
-    <meta name="author" content="IEEE RAS & IEEE IAS Student Chapters" />
-    <meta property="og:title" content="IEEE RAS & IEEE IAS Student Chapters" />
-    <meta property="og:description" content="Reusable foundation for IEEE student chapter websites." />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <title>IEEE RAS & IAS</title>
-    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/variables.css" />
-    <link rel="stylesheet" href="assets/css/components.css" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/home.css" />
-    <link rel="stylesheet" href="assets/css/responsive.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container nav-wrapper">
-        <a class="brand" href="index.html" aria-label="Go to home page">IEEE RAS & IAS</a>
-        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <nav class="site-nav" aria-label="Primary navigation">
-          <a href="index.html" class="active">Home</a>
-          <a href="ras.html">RAS</a>
-          <a href="ias.html">IAS</a>
-        </nav>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Professional static website foundation for IEEE RAS and IEEE IAS Student Chapters." />
+  <meta name="keywords" content="IEEE, RAS, IAS, student chapter, robotics, industry applications" />
+  <meta name="author" content="IEEE RAS & IEEE IAS Student Chapters" />
+  <meta property="og:title" content="IEEE RAS & IEEE IAS Student Chapters" />
+  <meta property="og:description" content="Reusable foundation for IEEE student chapter websites." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <title>IEEE RAS & IAS</title>
+  <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/variables.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/home.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a class="brand" href="index.html" aria-label="Go to home page">
+        <div class="brand-logos">
+          <img src="assets/logos/mits-logo.jfif" alt="MITS Logo" title="MITS Gwalior" />
+          <img src="assets/logos/ieee-logo.png" alt="IEEE Logo" title="IEEE" />
+          <div class="brand-divider"></div>
+          <img src="assets/logos/ras-logo.png" alt="RAS Logo" title="IEEE RAS" />
+          <img src="assets/logos/ias-logo.png" alt="IAS Logo" title="IEEE IAS" />
+        </div>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html" class="active">Home</a>
+        <a href="ras.html">RAS</a>
+        <a href="ias.html">IAS</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="hero-bg-wrapper">
+        <img src="assets/images/home/hero/hero-bg.jpg" alt="Engineering and Robotics Background" class="hero-bg-img" />
+        <!-- TODO: replace with final asset -->
+        <div class="hero-overlay"></div>
       </div>
-    </header>
-
-    <main id="main-content">
-      <!-- Hero Section -->
-      <!-- About Section -->
-      <!-- Achievements Section -->
-      <!-- Events Section -->
-      <!-- Our Societies Section -->
-     
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-content">
-        <p>&copy; <span id="year"></span> IEEE RAS & IEEE IAS Student Chapters.</p>
+      <div class="container hero-content">
+        <h1 class="hero-title animate-on-load">IEEE IAS RAS Student Branch</h1>
+        <p class="hero-subtitle animate-on-load">Innovating the future of robotics and industry applications.</p>
+        <div class="hero-ctas animate-on-load">
+          <a href="#events" class="btn btn-primary">Explore Events</a>
+          <a href="#join" class="btn btn-secondary">Join Us</a>
+        </div>
       </div>
-    </footer>
+      <div class="scroll-indicator animate-on-load">
+        <a href="#about" aria-label="Scroll down">
+          <span class="scroll-arrow"></span>
+        </a>
+      </div>
+    </section>
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-image-wrapper scroll-reveal">
+            <img src="assets/images/home/about/team-photo.jpg" alt="Our Team" class="about-image" />
+            <!-- TODO: replace with final asset -->
+          </div>
+          <div class="about-content scroll-reveal">
+            <h2 class="section-title">Who We Are</h2>
+            <p class="about-intro">
+              We are a passionate community of students dedicated to pushing the boundaries of technology.
+              Our branch unites the IEEE Robotics and Automation Society (RAS) and the Industry Applications Society
+              (IAS)
+              to bridge the gap between theoretical knowledge and real-world industrial practice.
+            </p>
 
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/navigation.js"></script>
-    <script src="assets/js/animations.js"></script>
-    <script src="assets/js/home.js"></script>
-  </body>
+            <div class="about-cards">
+              <div class="about-card">
+                <div class="about-icon-wrapper">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <circle cx="12" cy="12" r="6"></circle>
+                    <circle cx="12" cy="12" r="2"></circle>
+                  </svg>
+                </div>
+                <h3 class="about-card-title">Our Mission</h3>
+                <p>To empower students with technical knowledge, innovation opportunities and leadership experiences.
+                </p>
+              </div>
+              <div class="about-card">
+                <div class="about-icon-wrapper">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17">
+                    </path>
+                  </svg>
+                </div>
+                <h3 class="about-card-title">Our Vision</h3>
+                <p>To create future-ready engineers who advance technology for humanity.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Achievements Section -->
+    <section class="section achievements-section" id="achievements">
+      <div class="container">
+        <div class="section-header text-center scroll-reveal">
+          <span class="section-pill">ACHIEVEMENTS</span>
+          <h2 class="section-title-lg">A track record we're proud of</h2>
+          <p class="section-subtitle">From securing $750 in funding and publishing 5 research papers across conferences,
+            to winning a Best Paper Award and driving 3 ongoing projects — here's what we've built so far.</p>
+        </div>
+
+        <div class="achievements-grid">
+          <!-- $750 USD Funding -->
+          <div class="stat-card scroll-reveal">
+            <div class="stat-icon-wrapper">
+              <img src="assets/images/home/achievements/icon-funding.svg" alt="Funding Icon" />
+            </div>
+            <div class="stat-number stat-prefix" data-target="750" data-prefix="$">$0</div>
+            <div class="stat-label">USD Funding Secured</div>
+          </div>
+          <!-- 5 Research Papers -->
+          <div class="stat-card scroll-reveal">
+            <div class="stat-icon-wrapper">
+              <img src="assets/images/home/achievements/icon-paper.svg" alt="Research Paper Icon" />
+            </div>
+            <div class="stat-number" data-target="5">0</div>
+            <div class="stat-label">Research Papers Published</div>
+          </div>
+          <!-- 1 Best Paper Award -->
+          <div class="stat-card scroll-reveal">
+            <div class="stat-icon-wrapper">
+              <img src="assets/images/home/achievements/icon-awards.svg" alt="Award Icon" />
+            </div>
+            <div class="stat-number" data-target="1">0</div>
+            <div class="stat-label">Best Paper Award</div>
+          </div>
+          <!-- 3 Ongoing Projects -->
+          <div class="stat-card scroll-reveal">
+            <div class="stat-icon-wrapper">
+              <img src="assets/images/home/achievements/icon-projects.svg" alt="Projects Icon" />
+            </div>
+            <div class="stat-number" data-target="3">0</div>
+            <div class="stat-label">Ongoing Projects</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- Events Section -->
+    <section class="section events-section" id="events">
+      <div class="container">
+        <div class="section-header text-center scroll-reveal">
+          <span class="section-pill">EVENTS</span>
+          <h2 class="section-title-lg">Our Recent Events</h2>
+          <p class="section-subtitle">Workshops, webinars, competitions and community drives organized by IEEE RAS &amp;
+            IAS MITS.</p>
+        </div>
+
+        <div class="events-grid">
+
+          <!-- Event 1: Nexus Quiz — 15 June 2025 -->
+          <div class="card event-card scroll-reveal">
+            <img src="assets/images/home/events/nexus-quiz.jpg" alt="Nexus Quiz Poster" class="event-image"
+              style="height: 200px; object-fit: cover;" />
+            <div class="event-header event-header--indigo" style="min-height: auto; padding: 0.5rem var(--space-4);">
+              <span class="event-type-tag">Quiz &bull; International Level</span>
+              <div class="event-date-badge">15 Jun 2025</div>
+            </div>
+            <div class="event-content">
+              <h3 class="event-title">Nexus Quiz — Where IoT Meets AI</h3>
+              <p class="event-organizer">IEEE Student Branch MITS Gwalior</p>
+              <p class="event-desc">International-level quiz on AI &amp; IoT trends. Fast-paced and interactive, open to
+                all tech enthusiasts.</p>
+              <ul class="event-highlights">
+                <li>AI, IoT &amp; Emerging Tech</li>
+                <li>E-Certificate for All Participants</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Event 2: GridTech — 30 June 2025 -->
+          <div class="card event-card scroll-reveal">
+            <img src="assets/images/home/events/gridtech.jpg" alt="GridTech Webinar Screenshot" class="event-image"
+              style="height: 200px; object-fit: cover;" />
+            <div class="event-header event-header--blue" style="min-height: auto; padding: 0.5rem var(--space-4);">
+              <span class="event-type-tag">Webinar &bull; Online</span>
+              <div class="event-date-badge">30 Jun 2025</div>
+            </div>
+            <div class="event-content">
+              <h3 class="event-title">GridTech: Where Energy Meets Code</h3>
+              <p class="event-organizer">IEEE PES SBC MITS &times; IEEE PES MP Section</p>
+              <p class="event-desc">A webinar on how coding transforms the energy sector, featuring Shashwat Dubey, CEO
+                of Globacom LLC.</p>
+              <ul class="event-highlights">
+                <li>Smart Grids &amp; Energy Innovation</li>
+                <li>Free Registration &bull; Online</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Event 3: Robocode — 6 September 2025 -->
+          <div class="card event-card scroll-reveal">
+            <img src="assets/images/home/events/robocode.jpg" alt="Robocode Poster" class="event-image"
+              style="height: 200px; object-fit: cover;" />
+            <div class="event-header event-header--teal" style="min-height: auto; padding: 0.5rem var(--space-4);">
+              <span class="event-type-tag">Workshop &bull; SH-12</span>
+              <div class="event-date-badge">6 Sept 2025</div>
+            </div>
+            <div class="event-content">
+              <h3 class="event-title">Robocode: Building the Future</h3>
+              <p class="event-organizer">Centre for IoT &mdash; MITS Gwalior</p>
+              <p class="event-desc">Hands-on IoT &amp; Robotics workshop using WOKWI simulation, with certificates and
+                refreshments for all.</p>
+              <ul class="event-highlights">
+                <li>WOKWI IoT Simulation</li>
+                <li>11 AM &bull; Venue SH-12</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Event 4: Open Recruitment — 10 March 2026 -->
+          <div class="card event-card scroll-reveal">
+            <img src="assets/images/home/events/recruitment.jpg" alt="Open Recruitment Poster" class="event-image"
+              style="height: 200px; object-fit: cover;" />
+            <div class="event-header event-header--orange" style="min-height: auto; padding: 0.5rem var(--space-4);">
+              <span class="event-type-tag">Recruitment &bull; IAS &amp; RAS</span>
+              <div class="event-date-badge">10 Mar 2026</div>
+            </div>
+            <div class="event-content">
+              <h3 class="event-title">Open Recruitment — Core Team 2K26</h3>
+              <p class="event-organizer">IEEE IAS &amp; RAS MITS Student Branch</p>
+              <p class="event-desc">Drive to recruit the core team across 6 divisions — design, web, content, events,
+                social media &amp; video.</p>
+              <ul class="event-highlights">
+                <li>6 Open Divisions</li>
+                <li>Global IEEE Exposure</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Event 5: Global Internships — 28 March 2026 -->
+          <div class="card event-card scroll-reveal">
+            <img src="assets/images/home/events/Global internships and masters roadmap webinar.jpg"
+              alt="Global Internships Poster" class="event-image" style="height: 200px; object-fit: cover;" />
+            <div class="event-header event-header--purple" style="min-height: auto; padding: 0.5rem var(--space-4);">
+              <span class="event-type-tag">Talk &bull; Google Meet</span>
+              <div class="event-date-badge">28 Mar 2026</div>
+            </div>
+            <div class="event-content">
+              <h3 class="event-title">Global Internships &amp; Master's Roadmap</h3>
+              <p class="event-organizer">IEEE IAS &amp; RAS MITS Student Branch</p>
+              <p class="event-desc">Speaker Akshet Patel (UCL, NTU Singapore) shared strategies for global internships
+                and Master's abroad.</p>
+              <ul class="event-highlights">
+                <li>Live Q&amp;A Session</li>
+                <li>Google Meet &bull; 6:30 PM IST</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Upcoming Events Banner -->
+        <div class="stay-tuned-banner scroll-reveal">
+          <h3 class="stay-tuned-title">More Events Coming Soon!</h3>
+          <p class="stay-tuned-desc">Our team is actively planning workshops, hackathons, and guest lectures. Follow our
+            social media to be the first to know when registrations open.</p>
+          <a href="https://www.instagram.com/ieee_ias_mits" target="_blank" class="stay-tuned-btn">Follow on
+            Instagram</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Upcoming Events Section -->
+    <section class="section upcoming-events-section" id="upcoming">
+      <div class="container">
+        <div class="timeline-container">
+          <div class="section-header text-center scroll-reveal">
+            <span class="section-pill">EVENT TIMELINE</span>
+            <h2 class="section-title-lg">Events at a Glance</h2>
+          </div>
+          <div class="timeline">
+            <div class="timeline-progress"></div>
+
+            <!-- Oldest → Newest (top → bottom) -->
+            <div class="timeline-item left scroll-reveal">
+              <div class="timeline-content card">
+                <span class="timeline-meta">RAS &amp; IAS &middot; 15 Jun 2025</span>
+                <h3 class="timeline-card-title">Nexus Quiz — Where IoT Meets AI</h3>
+                <p>International-level AI &amp; IoT quiz event held online.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item right scroll-reveal">
+              <div class="timeline-content card">
+                <span class="timeline-meta">IEEE PES &middot; 30 Jun 2025</span>
+                <h3 class="timeline-card-title">GridTech: Where Energy Meets Code</h3>
+                <p>Online webinar on smart grids and energy innovation.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item left scroll-reveal">
+              <div class="timeline-content card">
+                <span class="timeline-meta">RAS &amp; IAS &middot; 6 Sept 2025</span>
+                <h3 class="timeline-card-title">Robocode: Building the Future</h3>
+                <p>Hands-on IoT &amp; Robotics workshop using WOKWI at SH-12.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item right scroll-reveal">
+              <div class="timeline-content card">
+                <span class="timeline-meta">RAS &amp; IAS &middot; 10 Mar 2026</span>
+                <h3 class="timeline-card-title">Open Recruitment — Core Team 2K26</h3>
+                <p>Drive to recruit the 2K26 core team across 6 divisions.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item left scroll-reveal">
+              <div class="timeline-content card">
+                <span class="timeline-meta">RAS &amp; IAS &middot; 28 Mar 2026</span>
+                <h3 class="timeline-card-title">Global Internships &amp; Master's Roadmap</h3>
+                <p>Google Meet session with Akshet Patel on global internships &amp; Master's abroad.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Our Societies Section -->
+    <section class="section societies-section" id="societies">
+      <div class="container">
+        <div class="section-header text-center scroll-reveal">
+          <span class="section-pill">OUR SOCIETIES</span>
+          <h2 class="section-title-lg">Two Societies, One Chapter</h2>
+          <p class="section-subtitle">Explore the unique focus and impact of each IEEE student society.</p>
+        </div>
+
+        <div class="societies-grid">
+          <!-- RAS Card -->
+          <div class="society-card society-ras scroll-reveal">
+            <div class="society-logo-wrap">
+              <img src="assets/logos/ras-logo.png" alt="IEEE RAS Logo" class="society-logo-img" />
+            </div>
+            <div class="society-badge">RAS</div>
+            <h3 class="society-title">Robotics & Automation Society</h3>
+            <p class="society-desc">We build, program, and compete. RAS focuses on hands-on robotics, embedded systems,
+              and autonomous technologies that shape the future of industry.</p>
+            <ul class="society-highlights">
+              <li>Autonomous Robotics Projects</li>
+              <li>ROS & Embedded Systems Workshops</li>
+              <li>National Competitions</li>
+            </ul>
+            <a href="ras.html" class="btn society-btn-ras">Explore RAS &rarr;</a>
+          </div>
+
+          <!-- IAS Card -->
+          <div class="society-card society-ias scroll-reveal">
+            <div class="society-logo-wrap">
+              <img src="assets/logos/ias-logo.png" alt="IEEE IAS Logo" class="society-logo-img" />
+            </div>
+            <div class="society-badge">IAS</div>
+            <h3 class="society-title">Industry Applications Society</h3>
+            <p class="society-desc">We bridge academia and industry. IAS brings in expert speakers, hosts hackathons,
+              and explores real-world applications of electrical engineering and power systems.</p>
+            <ul class="society-highlights">
+              <li>Industry Expert Talk Series</li>
+              <li>Smart Energy & Power Systems</li>
+              <li>Hackathons & Case Competitions</li>
+            </ul>
+            <a href="ias.html" class="btn society-btn-ias">Explore IAS &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <!-- Brand & About -->
+      <div class="footer-col footer-brand-col">
+        <div class="footer-logo">
+          <div style="display: flex; gap: 0.5rem;">
+            <img src="assets/logos/ras-logo.png" alt="IEEE RAS Logo" />
+            <img src="assets/logos/ias-logo.png" alt="IEEE IAS Logo" />
+          </div>
+          <div>
+            <h4>IEEE RAS &amp; IAS</h4>
+            <span>MITS Gwalior Student Chapters</span>
+          </div>
+        </div>
+        <p class="footer-desc">
+          Advancing technology for humanity through Robotics, AI, Automation and Industry Applications. A community of student innovators, researchers, and future engineers.
+        </p>
+        <div class="footer-socials">
+          <a href="#" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+          <a href="#" aria-label="Twitter">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+          </a>
+          <a href="#" aria-label="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Chapter Links -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Chapter</h4>
+        <ul class="footer-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#team">Team</a></li>
+        </ul>
+      </div>
+
+      <!-- Societies Links -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Societies</h4>
+        <ul class="footer-links">
+          <li><a href="ias.html">IEEE IAS</a></li>
+          <li><a href="ras.html">IEEE RAS</a></li>
+          <li><a href="#events">Events</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-col footer-contact">
+        <h4 class="footer-heading">Contact</h4>
+        <ul class="footer-contact-list">
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <span>MITS Gwalior, Gola ka Mandir</span>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <div style="display: flex; flex-direction: column; gap: 0.35rem;">
+              <a href="mailto:ieee.ras@mitsgwalior.in">ieee.ras@mitsgwalior.in</a>
+              <a href="mailto:ieee.ias@mitsgwalior.in">ieee.ias@mitsgwalior.in</a>
+            </div>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <a href="tel:+910000000000">+91 00000 00000</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <div class="footer-copyright">
+        &copy; <span id="year">2026</span> IEEE RAS &amp; IAS MITS Gwalior Student Chapters. All rights reserved.
+      </div>
+      <div class="footer-tagline">
+        Advancing Technology For Humanity.
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/navigation.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/home.js"></script>
+</body>
+
 </html>

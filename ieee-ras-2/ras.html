@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IEEE Robotics &amp; Automation Society | MITS Gwalior Student Chapter</title>
+  <meta name="description"
+    content="IEEE Robotics & Automation Society (RAS) Student Chapter — MITS Gwalior. Building the future with Robotics, AI and Automation.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/ras.css">
+</head>
+
+<body>
+
+  <!-- Background ambience -->
+  <div class="bg-fx" aria-hidden="true">
+    <div class="blob blob-a"></div>
+    <div class="blob blob-b"></div>
+    <div class="circuit-grid"></div>
+    <canvas id="particles"></canvas>
+  </div>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="#home" class="brand">
+        <div class="brand-logos">
+          <img src="assets/images/ras/ieee-ras-logo.svg" alt="IEEE RAS Logo" class="logo logo-ras">
+          <span class="brand-divider"></span>
+          <img src="assets/images/ras/mits-logo.svg" alt="MITS Gwalior Logo" class="logo logo-mits">
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">IEEE RAS</span>
+          <span class="brand-sub">MITS Gwalior Student Chapter</span>
+        </div>
+      </a>
+
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ================= SECTION 1 — HOME ================= -->
+    <section class="hero" id="home">
+      <div class="section-inner hero-grid">
+        <div class="hero-copy" data-aos="fade-up">
+          <span class="badge">🤖 IEEE Robotics &amp; Automation Society</span>
+          <h1 class="hero-title">
+            IEEE <span class="grad-text">Robotics &amp;</span><br>
+            <span class="grad-text">Automation Society</span><br>
+            Student Chapter
+          </h1>
+          <p class="hero-subtitle">
+            MITS Gwalior (Deemed University)<br>
+            Building the Future with Robotics, Artificial Intelligence and Automation.
+          </p>
+        </div>
+
+        <div class="hero-visual" data-aos="fade-up" data-aos-delay="150">
+          <div class="visual-glow"></div>
+          <svg class="robot-illustration" viewBox="0 0 520 520" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="Robotic arm illustration">
+            <defs>
+              <linearGradient id="armGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#7B2FF7" />
+                <stop offset="100%" stop-color="#C33764" />
+              </linearGradient>
+              <linearGradient id="nodeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#D63384" />
+                <stop offset="100%" stop-color="#7B2FF7" />
+              </linearGradient>
+            </defs>
+
+            <!-- orbit rings -->
+            <circle cx="260" cy="260" r="210" fill="none" stroke="url(#armGrad)" stroke-opacity="0.12"
+              stroke-width="1.5" />
+            <circle cx="260" cy="260" r="165" fill="none" stroke="url(#armGrad)" stroke-opacity="0.18"
+              stroke-width="1.5" />
+
+            <!-- circuit lines -->
+            <g class="circuit-lines" stroke="url(#armGrad)" stroke-width="1.4" fill="none" opacity="0.5">
+              <path d="M60 380 L140 380 L140 320 L200 320" />
+              <path d="M460 140 L400 140 L400 200 L340 200" />
+              <path d="M70 140 L130 140 L130 190" />
+              <path d="M450 400 L390 400 L390 350" />
+            </g>
+            <g class="circuit-dots" fill="url(#nodeGrad)">
+              <circle cx="60" cy="380" r="5" />
+              <circle cx="200" cy="320" r="4" />
+              <circle cx="460" cy="140" r="5" />
+              <circle cx="340" cy="200" r="4" />
+              <circle cx="70" cy="140" r="4" />
+              <circle cx="450" cy="400" r="4" />
+            </g>
+
+            <!-- base -->
+            <rect x="205" y="410" width="110" height="26" rx="8" fill="url(#armGrad)" />
+            <rect x="230" y="380" width="60" height="34" rx="10" fill="#1B1B1B" fill-opacity="0.85" />
+
+            <!-- arm segments (grouped for floating animation) -->
+            <g class="arm-group">
+              <rect x="248" y="270" width="24" height="115" rx="12" fill="url(#armGrad)" />
+              <circle cx="260" cy="270" r="20" fill="#ffffff" stroke="url(#armGrad)" stroke-width="6" />
+              <g transform="rotate(-28 260 270)">
+                <rect x="248" y="170" width="24" height="105" rx="12" fill="url(#armGrad)" fill-opacity="0.9" />
+              </g>
+              <circle cx="260" cy="172" r="17" fill="#ffffff" stroke="url(#nodeGrad)" stroke-width="6" />
+              <g transform="rotate(24 260 172)">
+                <rect x="249" y="95" width="22" height="82" rx="11" fill="url(#nodeGrad)" fill-opacity="0.95" />
+              </g>
+              <circle cx="260" cy="97" r="14" fill="#ffffff" stroke="url(#armGrad)" stroke-width="5" />
+              <!-- gripper -->
+              <path d="M248 97 L230 78 M272 97 L290 78" stroke="url(#armGrad)" stroke-width="7"
+                stroke-linecap="round" />
+            </g>
+
+            <!-- floating nodes -->
+            <circle class="node n1" cx="120" cy="230" r="6" fill="url(#nodeGrad)" />
+            <circle class="node n2" cx="400" cy="300" r="7" fill="url(#armGrad)" />
+            <circle class="node n3" cx="360" cy="90" r="5" fill="url(#nodeGrad)" />
+            <circle class="node n4" cx="90" cy="330" r="5" fill="url(#armGrad)" />
+          </svg>
+        </div>
+      </div>
+      <div class="scroll-hint" aria-hidden="true"><span></span></div>
+    </section>
+
+    <!-- ================= SECTION 2 — ABOUT ================= -->
+    <section class="about" id="about">
+      <div class="section-inner">
+        <div class="section-head" data-aos="fade-up">
+          <span class="eyebrow">Who We Are</span>
+          <h2 class="section-title">About IEEE RAS</h2>
+          <p class="section-desc">The Robotics &amp; Automation Society chapter at MITS Gwalior, driving hands-on
+            innovation in intelligent machines.</p>
+        </div>
+
+        <div class="glass-grid two-col">
+          <div class="glass-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="card-icon-wrap">
+              <svg class="card-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L3 7v10l9 5 9-5V7l-9-5z" stroke="url(#iconGradMission)" stroke-width="1.6"
+                  stroke-linejoin="round" />
+                <circle cx="12" cy="12" r="3.4" stroke="url(#iconGradMission)" stroke-width="1.6" />
+                <defs>
+                  <linearGradient id="iconGradMission" x1="0" y1="0" x2="24" y2="24">
+                    <stop stop-color="#7B2FF7" />
+                    <stop offset="1" stop-color="#C33764" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <h3 class="card-title">Our Mission</h3>
+            <p class="card-text">
+              To promote Robotics, Automation and Artificial Intelligence through innovation, research and technical
+              excellence.
+              We provide hands-on learning, workshops and collaborative platforms that empower students to build,
+              experiment
+              and grow together as engineers of tomorrow.
+            </p>
+            <ul class="card-tags">
+              <li>Robotics</li>
+              <li>AI</li>
+              <li>Automation</li>
+              <li>Research</li>
+              <li>Workshops</li>
+            </ul>
+          </div>
+
+          <div class="glass-card" data-aos="fade-up" data-aos-delay="120">
+            <div class="card-icon-wrap">
+              <svg class="card-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 3v3M12 18v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M3 12h3M18 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"
+                  stroke="url(#iconGradVision)" stroke-width="1.6" stroke-linecap="round" />
+                <circle cx="12" cy="12" r="4.2" stroke="url(#iconGradVision)" stroke-width="1.6" />
+                <defs>
+                  <linearGradient id="iconGradVision" x1="0" y1="0" x2="24" y2="24">
+                    <stop stop-color="#D63384" />
+                    <stop offset="1" stop-color="#8E44AD" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <h3 class="card-title">Our Vision</h3>
+            <p class="card-text">
+              To lead the way toward future technology through smart automation and global innovation. We aim to build
+              industry-ready engineers with strong research culture, leadership and engineering excellence, prepared to
+              solve real-world challenges at scale.
+            </p>
+            <ul class="card-tags">
+              <li>Future Tech</li>
+              <li>Leadership</li>
+              <li>Industry Ready</li>
+              <li>Excellence</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================= SECTION 3 — WHAT WE WORK ON ================= -->
+    <section class="focus" id="focus">
+      <div class="section-inner">
+        <div class="section-head" data-aos="fade-up">
+          <span class="eyebrow">Our Domains</span>
+          <h2 class="section-title">What We Work On</h2>
+          <p class="section-desc">Cross-disciplinary areas where our members design, build and compete.</p>
+        </div>
+
+        <div class="focus-grid">
+          <div class="focus-card" data-aos="fade-up" data-aos-delay="0">
+            <span class="focus-icon">🤖</span>
+            <h3>Robotics</h3>
+            <p>Designing and building autonomous and manually operated robotic systems for real-world tasks.</p>
+          </div>
+          <div class="focus-card" data-aos="fade-up" data-aos-delay="60">
+            <span class="focus-icon">⚙️</span>
+            <h3>Automation</h3>
+            <p>Developing smart control systems that streamline processes and improve efficiency.</p>
+          </div>
+          <div class="focus-card" data-aos="fade-up" data-aos-delay="120">
+            <span class="focus-icon">🧠</span>
+            <h3>Artificial Intelligence</h3>
+            <p>Applying machine learning and AI models to give robotic systems perception and decision-making.</p>
+          </div>
+          <div class="focus-card" data-aos="fade-up" data-aos-delay="180">
+            <span class="focus-icon">📡</span>
+            <h3>Internet of Things</h3>
+            <p>Connecting sensors and devices into intelligent, communicating networks.</p>
+          </div>
+          <div class="focus-card" data-aos="fade-up" data-aos-delay="0">
+            <span class="focus-icon">🚁</span>
+            <h3>Drone Technology</h3>
+            <p>Building and programming UAVs for navigation, mapping and aerial automation.</p>
+          </div>
+          <div class="focus-card" data-aos="fade-up" data-aos-delay="60">
+            <span class="focus-icon">💻</span>
+            <h3>Embedded Systems</h3>
+            <p>Programming microcontrollers and hardware that power our robotics projects.</p>
+          </div>
+          <div class="focus-card" data-aos="fade-up" data-aos-delay="120">
+            <span class="focus-icon">🔬</span>
+            <h3>Research Projects</h3>
+            <p>Exploring novel ideas in robotics and automation through guided student research.</p>
+          </div>
+          <div class="focus-card" data-aos="fade-up" data-aos-delay="180">
+            <span class="focus-icon">🏆</span>
+            <h3>Robotics Competitions</h3>
+            <p>Representing MITS at national and international robotics and automation competitions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================= SECTION 2.5 — FACULTY ADVISOR ================= -->
+    <section class="advisor" id="advisor">
+      <div class="section-inner">
+        <div class="section-head" data-aos="fade-up">
+          <span class="eyebrow">Leadership</span>
+          <h2 class="section-title">Faculty Advisor</h2>
+          <p class="section-desc">Guiding our vision and driving academic excellence.</p>
+        </div>
+
+        <div class="team-card" data-aos="fade-up" data-aos-delay="100"
+          style="max-width: 800px; margin: 0 auto; border: 1px solid var(--glass-border); box-shadow: var(--glass-shadow); padding: 32px 40px;">
+          <div class="team-photo-wrap" style="width: 120px; height: 120px;">
+            <img src="assets/images/ras/dr_murli_manohar.png" alt="Faculty Advisor" class="team-photo">
+          </div>
+          <div style="flex: 1;">
+            <h3 class="team-name" style="font-size: 1.4rem;">Dr Murli Manohar
+            </h3>
+            <p class="team-role" style="font-size: 1rem; margin-bottom: 8px;">Faculty Advisor</p>
+            <p class="team-meta" style="font-size: 0.95rem; margin-bottom: 16px;">Assistant Professor at MITS, Gwalior (M.P)</p>
+            <p class="card-text" style="font-size: 0.95rem; line-height: 1.6; color: var(--text-secondary);">
+              With a wealth of knowledge and expertise, our faculty advisor provides invaluable guidance, inspiring
+              students to push the boundaries of robotics and automation.
+            </p>
+            <div class="team-links" style="margin-top: 16px;">
+              <a href="#" aria-label="LinkedIn" class="team-link">in</a>
+              <a href="#" aria-label="Email" class="team-link">✉</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================= SECTION 4 — CORE TEAM ================= -->
+    <section class="core-team" id="core-team">
+      <div class="section-inner">
+        <div class="section-head" data-aos="fade-up">
+          <span class="eyebrow">Meet The Team</span>
+          <h2 class="section-title">RAS Core Team</h2>
+          <p class="section-desc">The students leading IEEE RAS MITS Gwalior forward.</p>
+        </div>
+
+        <div class="team-viewport">
+          <div class="team-track" id="teamTrack">
+            <!-- team cards injected/duplicated by JS for seamless auto-scroll -->
+    
+
+            <article class="team-card">
+              <div class="team-photo-wrap"><img src="assets/images/ras/Pratik_Chouragadey.png" alt="Chairperson"
+                  class="team-photo"></div>
+              <h3 class="team-name">Pratik Chouragadeya</h3>
+              <p class="team-role">Chairperson</p>
+              <p class="team-meta">Dept. of IOT &middot; Final Year</p>
+              <div class="team-links">
+                <a href="#" aria-label="LinkedIn" class="team-link">in</a>
+                <a href="#" aria-label="Email" class="team-link">✉</a>
+              </div>
+            </article>
+
+            <article class="team-card">
+              <div class="team-photo-wrap"><img src="assets/images/ras/ARYAN CHOUHAN.png" alt="Vice Chairperson"
+                  class="team-photo"></div>
+              <h3 class="team-name">Aryan chouhan</h3>
+              <p class="team-role">Vice Chairperson</p>
+              <p class="team-meta">Dept. of ET&middot; Third Year</p>
+              <div class="team-links">
+                <a href="#" aria-label="LinkedIn" class="team-link">in</a>
+                <a href="#" aria-label="Email" class="team-link">✉</a>
+              </div>
+            </article>
+
+            <article class="team-card">
+              <div class="team-photo-wrap"><img src="assets/images/ras/SNEHA.png" alt="Secretary"
+                  class="team-photo"></div>
+              <h3 class="team-name">Sneha</h3>
+              <p class="team-role">Secretary</p>
+              <p class="team-meta">Dept. of IOT &middot; Third Year</p>
+              <div class="team-links">
+                <a href="#" aria-label="LinkedIn" class="team-link">in</a>
+                <a href="#" aria-label="Email" class="team-link">✉</a>
+              </div>
+            </article>
+
+            <article class="team-card">
+              <div class="team-photo-wrap"><img src="assets/images/ras/NSK.png" alt="Technical Head"
+                  class="team-photo"></div>
+              <h3 class="team-name">Naveen Sharma</h3>
+              <p class="team-role">Media and Content lead</p>
+              <p class="team-meta">Dept. of IOT &middot; Third Year</p>
+              <div class="team-links">
+                <a href="#" aria-label="LinkedIn" class="team-link">in</a>
+                <a href="#" aria-label="Email" class="team-link">✉</a>
+              </div>
+            </article>
+
+            <article class="team-card">
+              <div class="team-photo-wrap"><img src="assets/images/ras/k.png" alt="Design Head"
+                  class="team-photo"></div>
+              <h3 class="team-name">	Kratika Dixit</h3>
+              <p class="team-role">Webmaster</p>
+              <p class="team-meta">Dept. of CSD &middot; Third Year</p>
+              <div class="team-links">
+                <a href="#" aria-label="LinkedIn" class="team-link">in</a>
+                <a href="#" aria-label="Email" class="team-link">✉</a>
+              </div>
+            </article>
+            <article class="team-card">
+              <div class="team-photo-wrap"><img src="assets/images/ras/Aishwary Pahariya.png" alt="Design Head"
+                  class="team-photo"></div>
+              <h3 class="team-name">Aishwary Pahariya</h3>
+              <p class="team-role">Treasurer</p>
+              <p class="team-meta">Dept. of CSD &middot; Third Year</p>
+              <div class="team-links">
+                <a href="#" aria-label="LinkedIn" class="team-link">in</a>
+                <a href="#" aria-label="Email" class="team-link">✉</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="section-inner footer-inner">
+      
+      <!-- Column 1: Brand & Socials -->
+      <div class="footer-col footer-brand">
+        <div class="footer-logo-wrap">
+          <img src="assets/images/ras/ieee-ras-logo.svg" alt="IEEE RAS Logo" class="footer-logo">
+          <div class="footer-logo-text">
+            <span class="title">IEEE RAS</span>
+            <span class="sub">MITS Gwalior Student Chapter</span>
+          </div>
+        </div>
+        <p class="footer-desc">
+          Advancing technology for humanity through Robotics, AI and Automation. A community of student innovators, researchers, and future engineers.
+        </p>
+        <div class="footer-socials">
+          <a href="https://www.linkedin.com/company/ieee-ras-student-branch-mits/posts/?feedView=all" class="social-icon" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+          <a href="https://www.linkedin.com/company/ieee-ras-student-branch-mits/posts/?feedView=all" class="social-icon" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+          
+        </div>
+      </div>
+
+      <!-- Column 2: Chapter -->
+      <div class="footer-col footer-links">
+        <h4 class="footer-heading">Chapter</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#core-team">Team</a></li>
+          
+        </ul>
+      </div>
+
+      <!-- Column 3: Societies -->
+      <div class="footer-col footer-links">
+        <h4 class="footer-heading">Societies</h4>
+        <ul>
+          <li><a href="#">IEEE IAS</a></li>
+          <li><a href="#">IEEE RAS</a></li>
+          <li><a href="#">Events</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Contact -->
+      <div class="footer-col footer-contact">
+        <h4 class="footer-heading">Contact</h4>
+        <ul>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <span>MITS Gwalior, Gola ka Mandir</span>
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <span>ieee.ras@mitsgwalior.in</span>
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>+91 00000 00000</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+    
+    <div class="footer-bottom-bar">
+      <div class="section-inner footer-bottom-inner">
+        <div class="footer-copy">
+          &copy; <span id="year">2026</span> IEEE RAS MITS Gwalior Student Chapter. All rights reserved.
+        </div>
+        <div class="footer-slogan">
+          Advancing Technology For Humanity.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <script src="assets/js/ras.js"></script>
+</body>
+
+</html>
