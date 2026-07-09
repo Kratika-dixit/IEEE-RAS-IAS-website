@@ -1,0 +1,24 @@
+/* Theme variables and design tokens */
+:root {
+  --color-bg: #f8fafc;
+  --color-surface: #ffffff;
+  --color-text: #111827;
+  --color-muted: #6b7280;
+  --color-primary: #0f4c81;
+  --color-primary-dark: #0a355d;
+  --color-accent: #f59e0b;
+  --color-border: #e5e7eb;
+  --shadow-sm: 0 4px 12px rgba(15, 76, 129, 0.08);
+  --shadow-md: 0 10px 30px rgba(15, 76, 129, 0.12);
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --container-width: 1200px;
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 3rem;
+  --space-6: 4rem;
+  --font-family: 'Poppins', sans-serif;
+}
